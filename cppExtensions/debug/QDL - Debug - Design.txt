@@ -1,0 +1,12 @@
+QDL - Debug - Design
+
+Purpose?: 
+	- Debug class that complies with RPM C++ Design debugging rules used for fast an effecient debugging of new C++ Projects
+
+NEED TO HAVE?
+	- Must be able to 
+		- Log to file
+		- Log to msgbox
+		- Log to console
+		- Have methods for all RPM C++ Design debugging info layouts
+	- Design and implementation must Comply with RPPM C++ Design Rules

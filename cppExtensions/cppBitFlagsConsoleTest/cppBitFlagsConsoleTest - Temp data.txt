@@ -9,9 +9,100 @@ fix BITWISE ASSIGNEMNT OPERATOR IMPLEMENTATION (OK)
 - Implement cppBitFlags in debugTestConsole prj (PENDING)
 -------------------------------------------
 
+/*
+ENUM OVERLOAD SOLUTION: Copy - paste the operator overload functions template beneath to a location beneath the your enum class and replace the T with enum name and TdataType with enum data type!!
+NOTE!!If enum is a member of another class add friend in front on the operator overload function or c++ will assue the overload is for the parrentClass of enum!!
+NOTE!!Make sure TdataType is a data type that is big enough (bit size wise) for all the bit flags needed by your enum, fx. int typ. has 32 bits so thats 32 bit flags.
+HINT!! WHEN UING FIND-REPLACE ALLWAYS START WITH TdataType, this makes it easier to Replace the T's ;)
+TEMPLATE ARGS:
+    Tclass      : Replace with the name of your enum class
+    TdataType   : Replace with the data type of your enum Class, fx. int
+    NOTE!!: const keyword is not really required it just a safety measure to tell the operator overload that the arg is read only
+    SORUCE      : If more non binary oriented overloads is needed the prototype design can be found here https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B 
+*/
+// CLASSLESS ENUM OPERATOR OVERLOAD TEMPLATE, hence the enum is a free enum not a member of a class (ENUM OUTSIDE CLASS)-------------------
+/*
+        // ASSIGNMENT OPERATOR OVERLOADS (NOT ALLOWED FOR Classless enums) (MUST BE MEMBER CLASS::FUNCTION :( )
 
+        // COMPARISON OPERATOR OVERLOADS
+        const bool operator== (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ == (TdataType)b_); } // EQUAL TO, a_ == b_    
+        const bool operator== (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ == b_); } // EQUAL TO, a_ == b_
+        const bool operator!= (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ != (TdataType)b_); } // NOT EQUAL TO, a_ != b_
+        const bool operator!= (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ != b_); } // NOT EQUAL TO, a_ != b_
 
+        // LOGICAL OPERATOR OVERLOADS
+        bool operator! (const Tclass a_) { return (bool)(!(TdataType)a_); } // LOGICAL NEGATION (NOT/FLIP VALUE), !a_ ==> if a_ <= 0 => !a_ = true, else false
+        bool operator&& (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ && (TdataType)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        bool operator&& (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ && (TdataType)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        bool operator|| (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ || (TdataType)b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+        bool operator|| (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ || b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
 
+        // BITWISE OPERATOR OVERLOADS
+        Tclass operator~ (const Tclass a_) { return (Tclass)(~(TdataType)a_); }// BITWISE NOT (NEGATE/INVERT/FLIP BITS), ~a_ ==> if Bit(n) = 1 the ~bit(n) = 0 and if Bit(n) = 0 then ~Bit(n) = 1
+        Tclass operator| (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ | (TdataType)b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1 
+        Tclass operator| (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ | b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+        Tclass operator& (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ & (TdataType)b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        Tclass operator& (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ & b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        Tclass operator^ (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ ^ (TdataType)b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+        Tclass operator^ (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ ^ b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+
+        // BITWISE ASSIGNEMNT OPERATORS
+        Tclass& operator|= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ |= (TdataType)b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        Tclass& operator|= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ |= b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        Tclass& operator&= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ &= (TdataType)b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        Tclass& operator&= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ &= b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        Tclass& operator^= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ ^= (TdataType)b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+        Tclass& operator^= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ ^= b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+
+*/
+
+/*
+ENUM OVERLOAD SOLUTIONS: Copy - paste the operator overload functions template beneath to a location beneath the your enum class and replace the T with enum name and TdataType with enum data type!!
+NOTE!!When enum is a member of another class, friend in front on the operator overload function is required or c++ will assume the overload is for the parrentClass of enum!!
+NOTE!!Make sure TdataType is a data type that is big enough (bit size wise) for all the bit flags needed by your enum, fx. int typ. has 32 bits so thats 32 bit flags.
+HINT!! WHEN UING FIND-REPLACE ALLWAYS START WITH TdataType, this makes it easier to Replace the T's ;)
+TEMPLATE ARGS :
+    Tclass    : Replace with the name of your enum class
+    TdataType : Replace with the data type of your enum Class, fx. int
+    NOTE!! const keyword is not really required it just a safety measure to tell the operator overload that the arg is read only
+    SORUCE : If more non binary oriented overloads is needed the prototype design can be found here https ://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+
+*/
+// CLASS ENUM OPERATOR OVERLOAD TEMPLATE, hence the enum is a member of a class (is inside another class) (ENUM INSIDE CLASS)
+/*
+        // ASSIGNMENT OPERATOR OVERLOADS (NOT ALLOWED FOR friend Class enums) (MUST BE MEMBER OF CLASS::FUNCTION :( )
+
+        // COMPARISON OPERATOR OVERLOADS
+        friend const bool operator== (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ == (TdataType)b_); } // EQUAL TO, a_ == b_
+        friend const bool operator== (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ == b_); } // EQUAL TO, a_ == b_
+        friend const bool operator!= (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ != (TdataType)b_); } // NOT EQUAL TO, a_ != b_
+        friend const bool operator!= (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ != b_); } // NOT EQUAL TO, a_ != b_
+
+        // LOGICAL OPERATOR OVERLOADS
+        friend bool operator! (const Tclass a_) { return (bool)(!(TdataType)a_); } // LOGICAL NEGATION (NOT/FLIP VALUE), !a_ ==> if a_ <= 0 => !a_ = true, else false
+        friend bool operator&& (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ && (TdataType)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        friend bool operator&& (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ && (TdataType)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        friend bool operator|| (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ || (TdataType)b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+        friend bool operator|| (const Tclass a_, const TdataType b_) { return (bool)((TdataType)a_ || b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+
+        // BITWISE OPERATOR OVERLOADS
+        friend Tclass operator~ (const Tclass a_) { return (Tclass)(~(TdataType)a_); }// BITWISE NOT (NEGATE/INVERT/FLIP BITS), ~a_ ==> if Bit(n) = 1 the ~bit(n) = 0 and if Bit(n) = 0 then ~Bit(n) = 1
+        friend Tclass operator| (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ | (TdataType)b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+        friend Tclass operator| (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ | b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+        friend Tclass operator& (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ & (TdataType)b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        friend Tclass operator& (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ & b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        friend Tclass operator^ (const Tclass a_, const Tclass b_) { return (Tclass)((TdataType)a_ ^ (TdataType)b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+        friend Tclass operator^ (const Tclass a_, const TdataType b_) { return (Tclass)((TdataType)a_ ^ b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+
+        // BITWISE ASSIGNEMNT OPERATORS
+        friend Tclass& operator|= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ |= (TdataType)b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        friend Tclass& operator|= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ |= b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        friend Tclass& operator&= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ &= (TdataType)b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        friend Tclass& operator&= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ &= b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        friend Tclass& operator^= (const Tclass& a_, const Tclass b_) { return (Tclass&)((TdataType&)a_ ^= (TdataType)b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+        friend Tclass& operator^= (const Tclass& a_, const TdataType b_) { return (Tclass&)((TdataType&)a_ ^= b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+
+*/
 
 
 

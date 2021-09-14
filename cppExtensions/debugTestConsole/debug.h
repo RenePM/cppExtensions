@@ -9,7 +9,7 @@
 #include <initializer_list> // used for variable ars
 #include <stdarg.h> // Used for variable args
 #include <winnt.h> // required to make enums compatible with bit flags
-#include "cppEnumBitFlags.h"
+#include "cppBitFlags.h"
 
 using namespace std;
 
@@ -62,7 +62,7 @@ namespace rpmClasses
         };
 
         // enum bit flags for log messge detail       
-        enum class enumMessageFlags : int
+        enum class enumMessageFlags : uint8_t
         {
             IS_LINE = (1 << 0),
             IS_APP = (1 << 1),
@@ -71,22 +71,39 @@ namespace rpmClasses
             IS_FUNC = (1 << 4),
         };
 
+        // ASSIGNMENT OPERATOR OVERLOADS
+        friend enumMessageFlags& operator= (const enumMessageFlags& a_, const enumMessageFlags b_) { return (enumMessageFlags&)((uint8_t&)a_ = (uint8_t)b_); } // EQUAL TO, a_ = b_
+        friend enumMessageFlags& operator= (const enumMessageFlags& a_, const uint8_t b_) { return (enumMessageFlags&)((uint8_t&)a_ = b_); } // EQUAL TO, a_ = b_
+
+        // COMPARISON OPERATOR OVERLOADS
+        friend const bool operator== (const enumMessageFlags a_, const enumMessageFlags b_) { return (bool)((uint8_t)a_ == (uint8_t)b_); } // EQUAL TO, a_ == b_
+        friend const bool operator== (const enumMessageFlags a_, const uint8_t b_) { return (bool)((uint8_t)a_ == b_); } // EQUAL TO, a_ == b_
+        friend const bool operator!= (const enumMessageFlags a_, const enumMessageFlags b_) { return (bool)((uint8_t)a_ != (uint8_t)b_); } // NOT EQUAL TO, a_ != b_
+        friend const bool operator!= (const enumMessageFlags a_, const uint8_t b_) { return (bool)((uint8_t)a_ != b_); } // NOT EQUAL TO, a_ != b_
+
         // LOGICAL OPERATOR OVERLOADS
-        friend bool operator! (enumMessageFlags a) { return (bool)(~(int)a); } // LOGICAL NEGATION (NOT)
-        friend bool operator&& (enumMessageFlags a, enumMessageFlags b) { return (bool)((int)a && (int)b); } // LOGICAL AND
-        friend bool operator|| (enumMessageFlags a, enumMessageFlags b) { return (bool)((int)a || (int)b); } //LOGICAL OR
+        friend bool operator! (const enumMessageFlags a_) { return (bool)(!(uint8_t)a_); } // LOGICAL NEGATION (NOT/FLIP VALUE), !a_ ==> if a_ <= 0 => !a_ = true, else false
+        friend bool operator&& (const enumMessageFlags a_, const enumMessageFlags b_) { return (bool)((uint8_t)a_ && (uint8_t)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        friend bool operator&& (const enumMessageFlags a_, const uint8_t b_) { return (bool)((uint8_t)a_ && (uint8_t)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+        friend bool operator|| (const enumMessageFlags a_, const enumMessageFlags b_) { return (bool)((uint8_t)a_ || (uint8_t)b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+        friend bool operator|| (const enumMessageFlags a_, const uint8_t b_) { return (bool)((uint8_t)a_ || b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
 
         // BITWISE OPERATOR OVERLOADS
-        friend enumMessageFlags operator~ (enumMessageFlags a) { return (enumMessageFlags)(~(int)a); }// BITWISE NOT (NEGATE/INVER/FLIP BITS)
-        friend enumMessageFlags operator| (enumMessageFlags a, enumMessageFlags b) { return (enumMessageFlags)((int)a | (int)b); } // BITWISE OR
-        friend enumMessageFlags operator& (enumMessageFlags a, enumMessageFlags b) { return (enumMessageFlags)((int)a & (int)b); } // BITWISE AND
-        friend enumMessageFlags operator^ (enumMessageFlags a, enumMessageFlags b) { return (enumMessageFlags)((int)a ^ (int)b); } // BITWISE XOR (UNEQUAL DETECTOR)
-        
+        friend enumMessageFlags operator~ (const enumMessageFlags a_) { return (T)(~(uint8_t)a_); }// BITWISE NOT (NEGATE/INVERT/FLIP BITS), ~a_ ==> if Bit(n) = 1 the ~bit(n) = 0 and if Bit(n) = 0 then ~Bit(n) = 1
+        friend enumMessageFlags operator| (const enumMessageFlags a_, const enumMessageFlags b_) { return (T)((uint8_t)a_ | (uint8_t)b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+        friend enumMessageFlags operator| (const enumMessageFlags a_, const uint8_t b_) { return (T)((uint8_t)a_ | b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+        friend enumMessageFlags operator& (const enumMessageFlags a_, const enumMessageFlags b_) { return (T)((uint8_t)a_ & (uint8_t)b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        friend enumMessageFlags operator& (const enumMessageFlags a_, const uint8_t b_) { return (T)((uint8_t)a_ & b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+        friend enumMessageFlags operator^ (const enumMessageFlags a_, const enumMessageFlags b_) { return (T)((uint8_t)a_ ^ (uint8_t)b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+        friend enumMessageFlags operator^ (const enumMessageFlags a_, const uint8_t b_) { return (T)((uint8_t)a_ ^ b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+
         // BITWISE ASSIGNEMNT OPERATORS
-        friend enumMessageFlags& operator|= (enumMessageFlags& a, enumMessageFlags b) { return (enumMessageFlags&)((int&)a |= (int)b); } // BITWISE OR ASSIGNMENT, thisFlag |= flag = thisFlag = (thisFlag | flag_) 
-        friend enumMessageFlags& operator&= (enumMessageFlags& a, enumMessageFlags b) { return (enumMessageFlags&)((int&)a &= (int)b); } // BITWISE AND ASSIGNEMT, thisFlag &= flag = thisFlag = (thisFlag & flag)
-        friend enumMessageFlags& operator^= (enumMessageFlags& a, enumMessageFlags b) { return (enumMessageFlags&)((int&)a ^= (int)b); } // BITWISE XOR ASSIGNEMNT, thisFlag ^= flag = thisFlag = (thisFlag ^ flag)
-        
+        friend enumMessageFlags& operator|= (const enumMessageFlags& a_, const enumMessageFlags b_) { return (enumMessageFlags&)((uint8_t&)a_ |= (uint8_t)b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        friend enumMessageFlags& operator|= (const enumMessageFlags& a_, const uint8_t b_) { return (enumMessageFlags&)((uint8_t&)a_ |= b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+        friend enumMessageFlags& operator&= (const enumMessageFlags& a_, const enumMessageFlags b_) { return (enumMessageFlags&)((uint8_t&)a_ &= (uint8_t)b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        friend enumMessageFlags& operator&= (const enumMessageFlags& a_, const uint8_t b_) { return (enumMessageFlags&)((uint8_t&)a_ &= b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+        friend enumMessageFlags& operator^= (const enumMessageFlags& a_, const enumMessageFlags b_) { return (enumMessageFlags&)((uint8_t&)a_ ^= (uint8_t)b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+        friend enumMessageFlags& operator^= (const enumMessageFlags& a_, const uint8_t b_) { return (enumMessageFlags&)((uint8_t&)a_ ^= b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)        
 
 
         // public class properties

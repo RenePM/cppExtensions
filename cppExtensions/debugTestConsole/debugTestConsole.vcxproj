@@ -142,7 +142,7 @@
     <ClCompile Include="debugTestConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cppEnumBitFlags.h" />
+    <ClInclude Include="cppBitFlags.h" />
     <ClInclude Include="debug.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

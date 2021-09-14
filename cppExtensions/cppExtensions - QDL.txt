@@ -1,0 +1,6 @@
+cppExtensions - QDL
+
+NEED 2 HAVE?
+	Implementaion?
+		- Template arg names must be unique in the file it exists in to
+		  ease the use of FIND-&-REPLACE command.

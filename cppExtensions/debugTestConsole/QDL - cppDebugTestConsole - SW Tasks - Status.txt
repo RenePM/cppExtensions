@@ -1,0 +1,36 @@
+---------------------------------------------------------------------------------------------
+QDL - cppDebugTestConsole - SW Project - Tasks - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for SW Projects, hence hardwareless implementation  
+STATES: 
+	(P)   = 	PENDING Task related to SW for Project feature/property
+	(PA)  =		PAUSED Task related to SW for Project feature/property
+	(W)   = 	WORKING ON Task related to RESEARCHING SW for Project feature/property
+	(D)   = 	DESIGNING Task related to SW for Project feature/property
+	(I)   = 	IMPLEMENTING Task related to SW for Project feature/property
+	(OK)   = 	DONE IMPLEMENTING Task related to SW for Project feature/property
+	(OKT)  = 	DONE, TESTED Task related to SW for Project feature/property
+	(OKTO) = 	DONE, TESTED, OK/APPROVED, Task related to SW for Project fature/property
+---------------------------------------------------------------------------------------------------
+Project - SW - SPECIFICATIONS - QDLS: (create your infoTree for SW Specifications)
+	- NEED 2 HAVE?
+		- Debug logfile functions (OKT)
+		- Implement a version of log functions that has build in string formating feature (OKT)
+			- formatMsg(...) (OKT)
+		- Implement bit flag compatability for enums using operator overload (OKT)
+			- cppBitFlags.h
+		- Implement a bitHandler template class for enums and for primitive data types. (OKT)
+			- cppBitFlags.h bitFlags class
+		- Opt. Implement date and/or time stamp in log messages (PENDING)
+
+		- Debug Msgbox functions (OKT)
+		  - Log debug messages to a msg box (OKT)
+
+		- Debug Console functions (P)
+		
+		- Debug Screen (std out) functions (OKT)  
+			- Log debug messages to Screen (stdout) (OKT)
+
+	- Update project with lastes file ver from consoleTest project (OK)
+
+	- NICE 2 HAVE?

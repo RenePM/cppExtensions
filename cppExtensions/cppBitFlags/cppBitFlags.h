@@ -380,7 +380,7 @@ TEMPLATE ARGS:
 */
 // CLASSLESS ENUM OPERATOR OVERLOAD TEMPLATE, hence the enum is a free enum not a member of a class (ENUM OUTSIDE CLASS)-------------------
 /*
-        // ASSIGNMENT OPERATOR OVERLOADS (NOT ALLOWED FOR Classless enums) (MUST BE MEMBER CLASS::FUNCTION :( )
+        // ASSIGNMENT OPERATOR OVERLOADS (NOT ALLOWED FOR Classless enums) (MUST BE MEMBER OF CLASS::FUNCTION :( )
 
         // COMPARISON OPERATOR OVERLOADS
         const bool operator== (const Tclass a_, const Tclass b_) { return (bool)((TdataType)a_ == (TdataType)b_); } // EQUAL TO, a_ == b_    

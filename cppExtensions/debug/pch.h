@@ -9,7 +9,7 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "debug.h"
+#include "cppDebug.h"
 //#include <string>
 //#include "cppWinApiDataTypes.h"
 

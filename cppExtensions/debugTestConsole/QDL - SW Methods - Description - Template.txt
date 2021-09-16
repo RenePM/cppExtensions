@@ -1,0 +1,13 @@
+----------
+Template for SW CLASS, Template, Function/Methods Description Comments
+-----------------------------
+/*
+ 	Function used to ?
+	STATUS: ?
+ 	INPUT:
+		aValue_: ?
+	OUTPUT:
+		oBValue_: ?
+	RETURN:
+		Bool: T = ?, F = ?
+*/

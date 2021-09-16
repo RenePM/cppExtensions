@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------------------------
+QDL - xxx - SW Todos - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for SW Project Todos, hence hardwareless implementation  
+STATES: 
+	(P)   = 	PENDING Todo related to SW for Project feature/property
+	(PA)  =		PAUSED Todo related to SW for Project feature/property
+	(W)   = 	WORKING ON Todo related to RESEARCHING SW for Project feature/property
+	(D)   = 	DESIGNING Todo related to SW for Project feature/property
+	(I)   = 	IMPLEMENTING Todo related to SW for Project feature/property
+	(OK)   = 	DONE IMPLEMENTING Todo related to SW for Project feature/property
+	(OKT)  = 	DONE, TESTED Todo related to SW for Project feature/property
+	(OKTO) = 	DONE, TESTED, OK/APPROVED, Todo related to SW for Project fature/property
+---------------------------------------------------------------------------------------------------
+Project - SW - SPECIFICATIONS - QDLS: (create your SW Todo infoTree)
+	- NEED 2 HAVE?
+
+	- NICE 2 HAVE?

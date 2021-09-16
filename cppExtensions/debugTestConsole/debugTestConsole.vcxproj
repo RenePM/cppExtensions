@@ -143,7 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cppBitFlags.h" />
-    <ClInclude Include="debug.h" />
+    <ClInclude Include="cppDebug.h" />
+    <ClInclude Include="debugTestConsole.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

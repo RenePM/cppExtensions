@@ -1,0 +1,28 @@
+-----------------------------------------------------------------------------------------
+QDL - cppDebugTestConsole - SW - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for keeping track of SW Projects, hence hardwareless implementation
+
+STATES: 
+	(P)  = 	PENDING Project feature/property
+	(PA) =	PAUSED Project feature/property
+	(W)  =	WORKING ON, RESEARCHING Project feature/property
+	(D)  = 	DESIGNING Project feature/property
+	(I)  = 	IMPLEMENTING Project feature/property
+	(OK) =	DONE IMPLEMENTING Project feature/property
+-------------------------------------------------------------------------------------
+Project - SPECIFICATIONS - QDLS: ( create your infoTree for Project Specifications)
+	- How to ensure continius implement/debug cycle?
+		- Use the project (Test project) to implement and debug and then
+		  copy the final working version of the project to the other test projects and main dll project (OK)
+
+	- How to use a enum for bit flags in c++?
+		- Must define operator overloads for the enum to
+                  use it for bitwise operations.
+	- sprintf equalent function in c++?
+		- used the vaArgs macro (OK)
+			- Implemented in formatMsg() function (OK)	
+
+	- NEED 2 HAVE?
+	
+	- NICE 2 HAVE?

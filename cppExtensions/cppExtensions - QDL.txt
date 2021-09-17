@@ -6,5 +6,5 @@ NEED 2 HAVE?
 		  ease the use of FIND-&-REPLACE command.
 		- debug class
 			- Class used to ease debugging by showing exact location of debbug msg,
-			  Hence who created it right down to line level.
+			  Hence who created it right down to line level. (OK)
 			- opt. date and time stamp

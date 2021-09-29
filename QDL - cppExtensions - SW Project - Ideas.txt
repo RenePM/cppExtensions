@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------------------
+QDL - xxx - SW - Ideas - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for keeping track of SW Project Ideas, hence hardwareless implementation
+
+STATES: 
+	(P)  = 	PENDING Project feature/property idea
+	(PA) =	PAUSED Project feature/property idea
+	(W)  =	WORKING ON, RESEARCHING Project feature/property idea
+	(D)  = 	DESIGNING Project feature/property idea
+	(I)  = 	IMPLEMENTING Project feature/property idea
+	(OK) =	DONE IMPLEMENTING Project feature/property idea
+-------------------------------------------------------------------------------------
+Project - IDEA - QDLS: ( create your infoTree for Project Ideas)
+	- NEED 2 HAVE?
+
+	- NICE 2 HAVE?
+		- C++ String class for string handling with formatMsg from my debug class implemented
+		  so you can format Strings using C sprintf formatting options. (P)
+			- Should enherit (become a type of) C++ string class so its just a
+			  add an extension to the existing string class by encapsulating it in my string handler class (P)

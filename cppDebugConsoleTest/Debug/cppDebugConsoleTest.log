@@ -1,0 +1,146 @@
+﻿  cppDebugConsoleTest.cpp
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(32,68): warning C4251: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Mypair': class 'std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<_Elem>>,true>' needs to have dll-interface to be used by clients of class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+          with
+          [
+              _Elem=char
+          ]
+H:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4658): message : see declaration of 'std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<_Elem>>,true>'
+          with
+          [
+              _Elem=char
+          ]
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(72,30): warning C4251: 'rpmClasses::cppDebug::staticMessage_': class 'std::basic_ostringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'rpmClasses::cppDebug'
+H:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iosfwd(229): message : see declaration of 'std::basic_ostringstream<char,std::char_traits<char>,std::allocator<char>>'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(41,36): error C2664: 'rpmClasses::cppDebug::cppDebug(const rpmClasses::cppDebug &)': cannot convert argument 1 from 'const char [13]' to 'const rpmClasses::cppDebug &'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(41,36): message : Reason: cannot convert from 'const char [13]' to 'const rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(41,36): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(85,2): message : see declaration of 'rpmClasses::cppDebug::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(44,13): error C2039: 'logMessage_': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(45,13): error C2039: 'logMessage_': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(47,13): error C2039: 'logFileMessage': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(47,36): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(50,13): error C2039: 'logFileMessageEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(50,38): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(53,13): error C2039: 'logFileMessageLineNum': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(53,43): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(56,13): error C2039: 'logFileMessageLineNumEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(56,45): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(59,13): error C2039: 'logFileClass': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(59,34): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(62,13): error C2039: 'logFileClassEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(62,36): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(65,13): error C2039: 'logFileClassLineNum': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(65,41): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(68,13): error C2039: 'logFileClassLineNumEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(68,43): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(71,13): error C2039: 'logFileClassFunction': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(71,42): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(74,13): error C2039: 'logFileClassFunctionEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(74,44): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(77,13): error C2039: 'logFileClassFunctionLineNum': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(77,49): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(80,13): error C2039: 'logFileClassFunctionLineNumEx': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(80,51): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(83,13): error C2039: 'logFileCustomMessage': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(83,42): error C2039: 'formatMsg': is not a member of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37): message : see declaration of 'rpmClasses::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(85,10): error C2653: 'debug': is not a class or namespace name
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(85,35): error C2065: 'IS_APP': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(85,44): error C2653: 'debug': is not a class or namespace name
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(85,69): error C2065: 'IS_FILE': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(101,5): error C2065: 'debug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(101,11): error C2146: syntax error: missing ';' before identifier 'myDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(101,11): error C3861: 'myDebug': identifier not found
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(105,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(105,34): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(105,150): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(108,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(108,36): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(108,154): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(111,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(111,41): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(111,164): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(114,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(114,43): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(114,168): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(117,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(117,32): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(117,146): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(120,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(120,34): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(120,150): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(123,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(123,39): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(123,160): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(126,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(126,41): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(126,164): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(129,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(129,40): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(129,134): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(132,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(132,42): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(132,136): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(135,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(135,47): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(135,141): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(138,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(138,49): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(138,143): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(141,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(141,40): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(141,134): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,10): error C2653: 'debug': is not a class or namespace name
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,35): error C2065: 'IS_APP': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,44): error C2653: 'debug': is not a class or namespace name
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,69): error C2065: 'IS_FILE': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,79): error C2653: 'debug': is not a class or namespace name
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(143,104): error C2065: 'IS_LINE': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(159,5): error C2065: 'debug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(159,11): error C2146: syntax error: missing ';' before identifier 'myDebug'
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(159,11): error C3861: 'myDebug': identifier not found
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(163,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(163,30): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(163,142): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(166,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(166,32): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(166,146): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(169,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(169,37): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(169,156): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(172,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(172,39): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(172,160): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(175,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(175,28): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(175,138): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(178,5): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(178,30): error C2065: 'myDebug': undeclared identifier
+D:\source\cppRepo\cppExtensions\cppDebugConsoleTest\cppDebugConsoleTest.cpp(178,37): fatal error C1003: error count exceeds 100; stopping compilation

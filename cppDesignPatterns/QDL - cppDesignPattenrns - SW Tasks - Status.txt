@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------------------
+QDL - xxx - SW Project - Tasks - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for SW Projects, hence hardwareless implementation  
+STATES: 
+	(P)   = 	PENDING Task related to SW for Project feature/property
+	(PA)  =		PAUSED Task related to SW for Project feature/property
+	(W)   = 	WORKING ON Task related to RESEARCHING SW for Project feature/property
+	(D)   = 	DESIGNING Task related to SW for Project feature/property
+	(I)   = 	IMPLEMENTING Task related to SW for Project feature/property
+	(OK)   = 	DONE IMPLEMENTING Task related to SW for Project feature/property
+	(OKT)  = 	DONE, TESTED Task related to SW for Project feature/property
+	(OKTO) = 	DONE, TESTED, OK/APPROVED, Task related to SW for Project fature/property
+---------------------------------------------------------------------------------------------------
+Project - SW - TASKS - QDLS: (create your infoTree for SW Specifications)
+	- Ensure correct type is in comment of all desig pattern templates (P)
+	- Create Template for the PIMPL Technique, since i will be using this in all my dlls to
+	  ensure C++ STL issent exposed to client/user of the dll libs, and thereby avoid a ton of bugs (P)
+
+	- NEED 2 HAVE?
+
+	- NICE 2 HAVE?

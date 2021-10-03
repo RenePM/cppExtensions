@@ -14,5 +14,7 @@ STATES:
 ---------------------------------------------------------------------------------------------------
 Project - SW - TASKS - QDLS: (create your infoTree for SW Specifications)
 	- NEED 2 HAVE?
+		- Must add my cppTemplate sectioned design using (#pragma region) to all my C++ projects (P)
+		- Add my C++ Design Method to All my C++ Projects (xxxImpl.h->xxxSectioned.h->xxx.h,xxx.cpp) (P)			
 
 	- NICE 2 HAVE?

@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  dllmain.cpp
+  myArray.cpp
+D:\source\cppRepo\cppExtensions\myArray\MyArray.h(18,7): warning C4251: 'MyArray<std::string,5>::arr': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'MyArray<std::string,5>'
+H:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\source\cppRepo\cppExtensions\myArray\myArray.cpp(29): message : see reference to class template instantiation 'MyArray<std::string,5>' being compiled
+  Generating Code...
+     Creating library D:\source\cppRepo\cppExtensions\Debug\myArray.lib and object D:\source\cppRepo\cppExtensions\Debug\myArray.exp
+  myArray.vcxproj -> D:\source\cppRepo\cppExtensions\Debug\myArray.dll

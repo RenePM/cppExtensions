@@ -1,5 +1,15 @@
 #pragma once
 
+// DLL EXPORT/IMPORT Define
+#ifdef CPPBITFLAGS_EXPORTS
+#   define CPPBITFLAGS_API    __declspec(dllexport)
+#   define CPPBITFLAGS_FUNC   extern "C" __declspec(dllexport)
+#   define CPPBITFLAGS_TEMPLATE
+#else
+#   define CPPBITFLAGS_API    __declspec(dllimport)
+#   define CPPBITFLAGS_FUNC   extern "C" __declspec(dllimport)
+#   define CPPBITFLAGS_TEMPLATE    extern
+#endif
 /*
     Template class Used to handle bitwise operations on enum classes containing bit flags fx. create a class of int flags
     TEMPLATE INPUT:
@@ -18,9 +28,87 @@
     // As function arg
     void myFunc(cppEnumBitFlag<enumClass, int> myFlag_, ....)
 
+    TO USE cppBitFlags in your project you must either :
+    A. Refernce this h file in your project,
+    Right click your project
+        - Select Configuration Properties->C/C++->Genereal
+            - Click Additional Include Directories
+                - Choose location of this file
+        - NOTE: Best solution since the project will always have a update version of the file
+
+    B. copy/paste this file to your project 
+        - Copy/paste the file from outside of visual studio
+          to the project folder of project that requires this bit flags handling
+        - NOTE!! Is a quick and dirty solution but hard to keep the file uptodate since
+          you need to copy/paste each time you modify the origrnal file
 */
-template <class Tclass, class TdataType>
-class cppEnumBitFlag
+
+// DLL EXPORT/IMPORT Define
+/*
+// Not used because this templated class cannot be placed in a dll file since it takes
+// "undefined template args", but feel free to use this define to create your dll's
+#ifdef CPPBITFLAGS_EXPORTS
+#define CPP_BITFLAGS_API    __declspec(dllexport)
+#define CPP_BITFLAGS_FUNC   extern "C" __declspec(dllexport)
+#else
+#define CPP_BITFLAGS_API    __declspec(dllimport)
+#define CPP_BITFLAGS_FUNC   extern "C" __declspec(dllimport)
+#endif
+*/
+
+#include <cstdio>
+#include <any>
+
+using namespace std;
+
+// Dummy Enum class to provied the template with default values
+enum class CPPBITFLAGS_API enumClass : int
+{
+    IS_FLAG_A = 1 << 0,
+    IS_FLAG_B = 1 << 1,
+};
+
+// ASSIGNMENT OPERATOR OVERLOADS (NOT ALLOWED FOR Classless enums) (MUST BE MEMBER OF CLASS::FUNCTION :( )
+
+// COMPARISON OPERATOR OVERLOADS
+const bool operator== (const enumClass a_, const enumClass b_) { return (bool)((int)a_ == (int)b_); } // EQUAL TO, a_ == b_    
+const bool operator== (const enumClass a_, const int b_) { return (bool)((int)a_ == b_); } // EQUAL TO, a_ == b_
+const bool operator!= (const enumClass a_, const enumClass b_) { return (bool)((int)a_ != (int)b_); } // NOT EQUAL TO, a_ != b_
+const bool operator!= (const enumClass a_, const int b_) { return (bool)((int)a_ != b_); } // NOT EQUAL TO, a_ != b_
+
+// LOGICAL OPERATOR OVERLOADS
+bool operator! (const enumClass a_) { return (bool)(!(int)a_); } // LOGICAL NEGATION (NOT/FLIP VALUE), !a_ ==> if a_ <= 0 => !a_ = true, else false
+bool operator&& (const enumClass a_, const enumClass b_) { return (bool)((int)a_ && (int)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+bool operator&& (const enumClass a_, const int b_) { return (bool)((int)a_ && (int)b_); } // LOGICAL AND, a_ && b_ ==> if a_ > 0 AND b_ > 0 then true, else false
+bool operator|| (const enumClass a_, const enumClass b_) { return (bool)((int)a_ || (int)b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+bool operator|| (const enumClass a_, const int b_) { return (bool)((int)a_ || b_); } //LOGICAL OR, a_ || b_ ==> if a_ > 0 AND/OR b_ > 0 then true, else false
+
+// BITWISE OPERATOR OVERLOADS
+enumClass operator~ (const enumClass a_) { return (enumClass)(~(int)a_); }// BITWISE NOT (NEGATE/INVERT/FLIP BITS), ~a_ ==> if Bit(n) = 1 the ~bit(n) = 0 and if Bit(n) = 0 then ~Bit(n) = 1
+enumClass operator| (const enumClass a_, const enumClass b_) { return (enumClass)((int)a_ | (int)b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1 
+enumClass operator| (const enumClass a_, const int b_) { return (enumClass)((int)a_ | b_); } // BITWISE OR, a_ | b_ ==>  0|0 = 0, 0|1 = 1, 1|0 = 1, 1|1 = 1
+enumClass operator& (const enumClass a_, const enumClass b_) { return (enumClass)((int)a_ & (int)b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+enumClass operator& (const enumClass a_, const int b_) { return (enumClass)((int)a_ & b_); } // BITWISE AND, a_ & b_ ==> 0&0 = 0, 0&1 = 0, 1&0 = 0, 1&1 = 1
+enumClass operator^ (const enumClass a_, const enumClass b_) { return (enumClass)((int)a_ ^ (int)b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+enumClass operator^ (const enumClass a_, const int b_) { return (enumClass)((int)a_ ^ b_); } // BITWISE XOR (UNEQUAL DETECTOR), a_ ^ b_ ==> 0^0=0, 0^1=1, 1^0=1, 1^1=0
+
+// BITWISE ASSIGNEMNT OPERATORS
+enumClass& operator|= (const enumClass& a_, const enumClass b_) { return (enumClass&)((int&)a_ |= (int)b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+enumClass& operator|= (const enumClass& a_, const int b_) { return (enumClass&)((int&)a_ |= b_); } // BITWISE OR ASSIGNMENT, a_ |= b_ ==> a_ = (a_ | b_)
+enumClass& operator&= (const enumClass& a_, const enumClass b_) { return (enumClass&)((int&)a_ &= (int)b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+enumClass& operator&= (const enumClass& a_, const int b_) { return (enumClass&)((int&)a_ &= b_); } // BITWISE AND ASSIGNEMT, a_ &= b_ ==> a_ = (a_ & b_)
+enumClass& operator^= (const enumClass& a_, const enumClass b_) { return (enumClass&)((int&)a_ ^= (int)b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+enumClass& operator^= (const enumClass& a_, const int b_) { return (enumClass&)((int&)a_ ^= b_); } // BITWISE XOR ASSIGNEMNT (TOGGLE BIT), a_ ^= b_ ==> a_ = (a_ ^ b_)
+
+
+
+/*
+    TEMPLATE INPUTS
+        Tclass: the enum class to use
+        TdataType: The data type that the enum class handles
+*/
+template <class Tclass = underlying_type<enumClass> , class TdataType = underlying_type<int>>
+class CPPBITFLAGS_API cppEnumBitFlag
 {
 
 private:
@@ -34,7 +122,7 @@ public:
     cppEnumBitFlag()
     {
         thisFlag_ = 0;
-        return;
+        return;        
     }
     
     cppEnumBitFlag(const cppEnumBitFlag<Tclass, TdataType>& flag_)
@@ -56,6 +144,12 @@ public:
         // Update thisFlag and return
         thisFlag_ = (Tclass)flag_;
         return;
+    }
+
+    // Def. Destructor
+    ~cppEnumBitFlag()
+    {
+
     }
 
     // Get function
@@ -362,10 +456,15 @@ public:
             thisFlag is casted as TdataTYpe because operator overload dont work inside class
             where the Operator is overloaded ??
         */
-        return (bool)((TdataType)thisFlag_ & (~(TdataType)(1 << bitIx_)));
+        //**return (bool)((TdataType)thisFlag_ & (~(TdataType)((TdataType)1 << bitIx_)));
+        return (bool)((Tclass)thisFlag_ & (~(Tclass)((TdataType)1 << bitIx_)));
     }
   
 };
+
+// Instanciate the template
+template cppEnumBitFlag<>;
+CPPBITFLAGS_TEMPLATE template class CPPBITFLAGS_API cppEnumBitFlag<>;
 
 /*
 ENUM OVERLOAD SOLUTION: Copy - paste the operator overload functions template beneath to a location beneath the your enum class and replace the T with enum name and TdataType with enum data type!!
@@ -474,8 +573,8 @@ TEMPLATE ARGS :
     void myFunc(cppBitFlag<int, int> myFlag_, ....)
 
 */
-template <class TdataType, class TcastSize>
-class cppBitFlag
+template <class TdataType = enumClass, class TcastSize = int>
+class CPPBITFLAGS_API cppBitFlag
 {
 
 private:
@@ -488,7 +587,7 @@ public:
     cppBitFlag()
     {
         // Init thisFlag
-        thisFlag_ = 0;
+        thisFlag_ = (TdataType)0;
         return;
     }
 
@@ -566,9 +665,9 @@ public:
     bool operator|| (const TdataType flag_) { return (bool)(thisFlag_ || flag_); } // LOGICAL OR   
 
     // BITWISE OPERATORS OVERLOADS
-    TdataType operator~() { return (TdataType)(~thisFlag_); } // BITWISE NOT/NEGATE (INVERT/FLIP BITS)
+    TdataType operator~() const { return (TdataType)(~thisFlag_); } // BITWISE NOT/NEGATE (INVERT/FLIP BITS)
     TdataType operator| (const TdataType flag_) { return (thisFlag_ | flag_); } // BITWISE OR
-    TdataType operator& (const TdataType flag_) { return (thisFlag_ & flag_); } // BITWISE AND
+    TdataType operator& (const TdataType flag_) const  { return (thisFlag_ & flag_); } // BITWISE AND
     TdataType operator^ (const TdataType flag_) { return (thisFlag_ ^ flag_); } // BITWISE XOR (BITWISE UNEQUAL DETECTOR), 1&1=0, 1&0=1, 0&1=1, 0&0=1
 
     //BITWISE ASSIGNEMNT OPERATOR OVERLOADS
@@ -678,7 +777,7 @@ public:
     TdataType   configBits(const TdataType flag_, const TdataType reservMask_)
     {
         // Clear all non reserved bits
-        thisFlag_ &= reservMask_;
+        thisFlag_ &= (TcastSize)reservMask_;
 
         // Set the specifed bits and return result
         return (thisFlag_ |= flag_);
@@ -698,7 +797,8 @@ public:
     bool    isSet(const TdataType flag_)
     {
         // Return result of BITWISE AND
-        return (bool)(thisFlag_ & flag_);
+        return (bool)((TcastSize)thisFlag_ & (TcastSize)flag_);
+        //return (bool)(thisFlag_ & flag_);
     }
 
     /*
@@ -714,7 +814,8 @@ public:
     bool    isSetAtIx(const TdataType bitIx_ = 0)
     {
         // Return result of BITWISE AND
-        return (bool)(thisFlag_ & ((TdataType)((TcastSize)1 << (TcastSize)bitIx_)));
+        return (bool)((TcastSize)thisFlag_ & ((TcastSize)((TcastSize)1 << (TcastSize)bitIx_)));
+        //return (bool)(thisFlag_ & ((TdataType)((TcastSize)1 << (TcastSize)bitIx_)));
     }
 
     /*
@@ -730,7 +831,8 @@ public:
     bool    isClear(const TdataType flag_)
     {
         // Return result of BITWISE AND        
-        return (bool)(thisFlag_ & ~flag_);
+        return (bool)((TcastSize)thisFlag_ & ~(TcastSize)flag_);
+        //return (bool)(thisFlag_ & ~flag_);
     }
 
     /*
@@ -746,7 +848,12 @@ public:
     bool    isClearAtIx(const TdataType bitIx_ = 0)
     {
         // Return result of BITWISE AND, 1 in the bit shift is casted as TdataType to avoid conversion failur when TdataType is a Enum or Class
-        return (bool)(thisFlag_ & (~(TdataType)((TcastSize)1 << (TcastSize)bitIx_)));
+        //return (bool)(thisFlag_ & (~(TdataType)((TcastSize)1 << (TcastSize)bitIx_)));
+        return (bool)((TdataType)thisFlag_ & (~(TdataType)((TcastSize)1 << (TcastSize)bitIx_)));
     }
 
 };
+
+// Instanciate the template
+template cppBitFlag<enumClass, int>;
+CPPBITFLAGS_TEMPLATE template class CPPBITFLAGS_API cppBitFlag<enumClass, int>;

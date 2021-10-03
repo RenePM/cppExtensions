@@ -1,3 +1,14 @@
 ﻿  pch.cpp
   dllmain.cpp
-  cppBitFlags.vcxproj -> D:\source\cppRepo\cppExtensions\Debug\cppBitFlags.dll
+D:\source\cppRepo\cppExtensions\cppBitFlags\cppBitFlags.h(460,1): error C2440: 'type cast': cannot convert from 'int' to 'TdataType'
+          with
+          [
+              TdataType=std::underlying_type<int>
+          ]
+D:\source\cppRepo\cppExtensions\cppBitFlags\cppBitFlags.h(460,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\source\cppRepo\cppExtensions\cppBitFlags\cppBitFlags.h(453): message : while compiling class template member function 'bool cppEnumBitFlag<std::underlying_type<enumClass>,std::underlying_type<int>>::isClear(const TdataType)'
+          with
+          [
+              TdataType=std::underlying_type<int>
+          ]
+D:\source\cppRepo\cppExtensions\cppBitFlags\cppBitFlags.h(466): message : see reference to class template instantiation 'cppEnumBitFlag<std::underlying_type<enumClass>,std::underlying_type<int>>' being compiled

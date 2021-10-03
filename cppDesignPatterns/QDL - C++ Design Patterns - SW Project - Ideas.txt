@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------------------
+QDL - xxx - SW - Ideas - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for keeping track of SW Project Ideas, hence hardwareless implementation
+
+STATES: 
+	(P)  = 	PENDING Project feature/property idea
+	(PA) =	PAUSED Project feature/property idea
+	(W)  =	WORKING ON, RESEARCHING Project feature/property idea
+	(D)  = 	DESIGNING Project feature/property idea
+	(I)  = 	IMPLEMENTING Project feature/property idea
+	(OK) =	DONE IMPLEMENTING Project feature/property idea
+-------------------------------------------------------------------------------------
+Project - IDEA - QDLS: ( create your infoTree for Project Ideas)
+	- NEED 2 HAVE?
+		- PIMPL Template Class, so that i can hide any C++ STL, without modifying the original structure of my class designs
+		  just my encapsulating them in my pimplClass and thereby allowing my my classes that use C++ STL, like string vector etc
+		  to implemented in a dll as a dll library (P)
+			- must use smart pointers (P)
+
+	- NICE 2 HAVE?

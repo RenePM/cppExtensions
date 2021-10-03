@@ -1,0 +1,17 @@
+-----------------------------------------------------------------------------------------
+QDL - xxx - SW - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for keeping track of SW Projects, hence hardwareless implementation
+
+STATES: 
+	(P)  = 	PENDING Project feature/property
+	(PA) =	PAUSED Project feature/property
+	(W)  =	WORKING ON, RESEARCHING Project feature/property
+	(D)  = 	DESIGNING Project feature/property
+	(I)  = 	IMPLEMENTING Project feature/property
+	(OK) =	DONE IMPLEMENTING Project feature/property
+-------------------------------------------------------------------------------------
+Project - SPECIFICATIONS - QDLS: ( create your infoTree for Project Specifications)
+	- NEED 2 HAVE?
+
+	- NICE 2 HAVE?

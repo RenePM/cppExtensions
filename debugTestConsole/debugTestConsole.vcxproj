@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\source\cppRepo\cppExtensions\debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,8 +143,6 @@
     <ClCompile Include="debugTestConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cppBitFlags.h" />
-    <ClInclude Include="cppDebug.h" />
     <ClInclude Include="debugTestConsole.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -45,7 +45,7 @@ namespace rpmClasses
 
     private:
         // private class Properties
-        structDebugInfo myDeybugInfo; // data struct that keeps track of last know debug msg location
+        structDebugInfo myDebugInfo; // data struct that keeps track of last know debug msg location
 
     public:
         ostringstream logMessage_; // String Stream used to create formatted strings
@@ -256,11 +256,11 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Create msg senderId
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -288,19 +288,19 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
             // Create msg senderId, appName::fileName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -324,25 +324,25 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -366,32 +366,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -416,20 +416,20 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -452,29 +452,29 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -497,32 +497,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::functionName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -545,42 +545,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::functionName w. def. obj seperator
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -608,21 +608,21 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::className
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -646,31 +646,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::fileName::className w. def obj seperator
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -694,35 +694,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className w. def. obj seperator "::"
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -746,42 +746,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName::className w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -806,31 +806,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y-> Update last known class name 
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::className::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -853,41 +853,41 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::className::functionName w. def. obj seperator "::"
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -910,42 +910,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className::functionName w. def obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -968,52 +968,52 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::className::functionName w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             logFile_ << senderId << ": " << formattedMsg_;
@@ -1040,35 +1040,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create custom msg senderId
@@ -1081,7 +1081,7 @@ namespace rpmClasses
             {
                 //Y->Add line num
                 senderId = "[";
-                senderId.append(to_string(myDeybugInfo.lineNum_));
+                senderId.append(to_string(myDebugInfo.lineNum_));
                 senderId.push_back(']');
             }
 
@@ -1089,7 +1089,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_APP) == enumMessageFlags::IS_APP)
             {
                 //Y->Add app name
-                senderId.append(myDeybugInfo.appName_);
+                senderId.append(myDebugInfo.appName_);
                 senderId.append(objSeperator_);
             }
 
@@ -1097,7 +1097,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FILE) == enumMessageFlags::IS_FILE)
             {
                 //Y->Add file name
-                senderId.append(myDeybugInfo.fileName_);
+                senderId.append(myDebugInfo.fileName_);
                 senderId.append(objSeperator_);
             }
 
@@ -1105,7 +1105,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_CLASS) == enumMessageFlags::IS_CLASS)
             {
                 //Y->Add class name
-                senderId.append(myDeybugInfo.className_);
+                senderId.append(myDebugInfo.className_);
                 senderId.append(objSeperator_);
             }
 
@@ -1113,7 +1113,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FUNC) == enumMessageFlags::IS_FUNC)
             {
                 //Y->Add func name
-                senderId.append(myDeybugInfo.functionName_);
+                senderId.append(myDebugInfo.functionName_);
                 senderId.append(objSeperator_);
             }
 
@@ -1155,11 +1155,11 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Create msg senderId
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1187,19 +1187,19 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
             // Create msg senderId, appName::fileName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1223,25 +1223,25 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1265,32 +1265,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1315,20 +1315,20 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1351,29 +1351,29 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1396,32 +1396,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::functionName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1444,42 +1444,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::functionName w. def. obj seperator
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1507,21 +1507,21 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::className
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1545,31 +1545,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::fileName::className w. def obj seperator
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1593,35 +1593,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className w. def. obj seperator "::"
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1645,42 +1645,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName::className w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1705,31 +1705,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y-> Update last known class name 
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::className::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1752,41 +1752,41 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::className::functionName w. def. obj seperator "::"
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1809,42 +1809,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className::functionName w. def obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1867,52 +1867,52 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::className::functionName w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to msgbox
             ::MessageBoxA(hWindow_, (LPCSTR)formattedMsg_.c_str(), (LPCSTR)senderId.c_str(), MB_OK);
@@ -1939,35 +1939,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create custom msg senderId
@@ -1980,7 +1980,7 @@ namespace rpmClasses
             {
                 //Y->Add line num
                 senderId = "[";
-                senderId.append(to_string(myDeybugInfo.lineNum_));
+                senderId.append(to_string(myDebugInfo.lineNum_));
                 senderId.push_back(']');
             }
 
@@ -1988,7 +1988,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_APP) == enumMessageFlags::IS_APP)
             {
                 //Y->Add app name
-                senderId.append(myDeybugInfo.appName_);
+                senderId.append(myDebugInfo.appName_);
                 senderId.append(objSeperator_);
             }
 
@@ -1996,7 +1996,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FILE) == enumMessageFlags::IS_FILE)
             {
                 //Y->Add file name
-                senderId.append(myDeybugInfo.fileName_);
+                senderId.append(myDebugInfo.fileName_);
                 senderId.append(objSeperator_);
             }
 
@@ -2004,7 +2004,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_CLASS) == enumMessageFlags::IS_CLASS)
             {
                 //Y->Add class name
-                senderId.append(myDeybugInfo.className_);
+                senderId.append(myDebugInfo.className_);
                 senderId.append(objSeperator_);
             }
 
@@ -2012,7 +2012,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FUNC) == enumMessageFlags::IS_FUNC)
             {
                 //Y->Add func name
-                senderId.append(myDeybugInfo.functionName_);
+                senderId.append(myDebugInfo.functionName_);
                 senderId.append(objSeperator_);
             }
 
@@ -2053,11 +2053,11 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Create msg senderId
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2085,19 +2085,19 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
             // Create msg senderId, appName::fileName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2121,25 +2121,25 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2163,32 +2163,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2213,20 +2213,20 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2249,29 +2249,29 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2294,32 +2294,32 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::functionName
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2342,42 +2342,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::functionName w. def. obj seperator
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2405,21 +2405,21 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::className
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2443,31 +2443,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known fileName
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Create msg senderId, appName::fileName::className w. def obj seperator
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2491,35 +2491,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className w. def. obj seperator "::"
             string senderId = "[";
 
             // Add line num
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
             // Add app name
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2543,42 +2543,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has fileName been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has className been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]::appName::fileName::className w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2603,31 +2603,31 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y-> Update last known class name 
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::className::functionName
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2650,41 +2650,41 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y-> Update last known function name 
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Create msg senderId, appName::fileName::className::functionName w. def. obj seperator "::"
-            string senderId = myDeybugInfo.appName_;
+            string senderId = myDebugInfo.appName_;
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to screen
             std::cout << senderId << ": " << formattedMsg_;
@@ -2707,42 +2707,42 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::className::functionName w. def obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2765,52 +2765,52 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create msg senderId, [lineNum]appName::fileName::className::functionName w. def. obj seperator "::"
             string senderId = "[";
-            senderId.append(to_string(myDeybugInfo.lineNum_));
+            senderId.append(to_string(myDebugInfo.lineNum_));
             senderId.push_back(']');
 
-            senderId.append(myDeybugInfo.appName_);
+            senderId.append(myDebugInfo.appName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.fileName_);
+            senderId.append(myDebugInfo.fileName_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.className_);
+            senderId.append(myDebugInfo.className_);
             senderId.append(objSeperator_);
 
-            senderId.append(myDeybugInfo.functionName_);
+            senderId.append(myDebugInfo.functionName_);
 
             // Log the message to file
             std::cout << senderId << ": " << formattedMsg_;
@@ -2837,35 +2837,35 @@ namespace rpmClasses
             if (appName_ != "")
             {
                 //Y->Update last known app name
-                myDeybugInfo.appName_ = appName_;
+                myDebugInfo.appName_ = appName_;
             }
 
             // Has file name been specified?
             if (fileName_ != "")
             {
                 //Y->Update last known file name
-                myDeybugInfo.fileName_ = fileName_;
+                myDebugInfo.fileName_ = fileName_;
             }
 
             // Has class name been specified?
             if (className_ != "")
             {
                 //Y->Update last known class name
-                myDeybugInfo.className_ = className_;
+                myDebugInfo.className_ = className_;
             }
 
             // Has function name been specified?
             if (functionName_ != "")
             {
                 //Y->Update last known function name
-                myDeybugInfo.functionName_ = functionName_;
+                myDebugInfo.functionName_ = functionName_;
             }
 
             // Has lineNum been specified?
             if (lineNum_ > -1)
             {
                 //Y-> Update last know line num
-                myDeybugInfo.lineNum_ = lineNum_;
+                myDebugInfo.lineNum_ = lineNum_;
             }
 
             // Create custom msg senderId
@@ -2878,7 +2878,7 @@ namespace rpmClasses
             {
                 //Y->Add line num
                 senderId = "[";
-                senderId.append(to_string(myDeybugInfo.lineNum_));
+                senderId.append(to_string(myDebugInfo.lineNum_));
                 senderId.push_back(']');
             }
 
@@ -2886,7 +2886,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_APP) == enumMessageFlags::IS_APP)
             {
                 //Y->Add app name
-                senderId.append(myDeybugInfo.appName_);
+                senderId.append(myDebugInfo.appName_);
                 senderId.append(objSeperator_);
             }
 
@@ -2894,7 +2894,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FILE) == enumMessageFlags::IS_FILE)
             {
                 //Y->Add file name
-                senderId.append(myDeybugInfo.fileName_);
+                senderId.append(myDebugInfo.fileName_);
                 senderId.append(objSeperator_);
             }
 
@@ -2902,7 +2902,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_CLASS) == enumMessageFlags::IS_CLASS)
             {
                 //Y->Add class name
-                senderId.append(myDeybugInfo.className_);
+                senderId.append(myDebugInfo.className_);
                 senderId.append(objSeperator_);
             }
 
@@ -2910,7 +2910,7 @@ namespace rpmClasses
             if ((messageFlags_ & enumMessageFlags::IS_FUNC) == enumMessageFlags::IS_FUNC)
             {
                 //Y->Add func name
-                senderId.append(myDeybugInfo.functionName_);
+                senderId.append(myDebugInfo.functionName_);
                 senderId.append(objSeperator_);
             }
 

@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------------------
+QDL - xxx - SW Project - Bugs - Status (Text version suited used to avoid File Access Issues in fx. GITHUB COMMITS AND PUSHES)
+NOTE!! Replace xxx with the name of your sw project
+NOTE!! This QDL is intended for SW Projects, hence hardwareless implementation  
+STATES: 
+	(P)   = 	PENDING Bug issue related to SW for Project feature/property
+	(PA)  =		PAUSED Bug issue related to SW for Project feature/property
+	(W)   = 	WORKING ON Bug issue related to RESEARCHING SW for Project feature/property
+	(I)   = 	IMPLEMENTING Bug fix related to SW for Project feature/property
+	(OK)   = 	DONE IMPLEMENTING Bug fix related to SW for Project feature/property
+	(OKT)  = 	DONE, TESTED Bug fix related to SW for Project feature/property
+	(OKTO) = 	DONE, TESTED, OK/APPROVED, Bug fix related to SW for Project fature/property
+---------------------------------------------------------------------------------------------------
+Project - SW - BUGS - QDLS: (create your infoTree for SW Bugs status)
+	- NEED 2 HAVE?
+
+	- NICE 2 HAVE?

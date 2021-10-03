@@ -20,12 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cppDebug.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cppBitFlags.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="debugTestConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -1,0 +1,223 @@
+﻿  pch.cpp
+  cppDebug.cpp
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(32,68): warning C4251: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Mypair': class 'std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<_Elem>>,true>' needs to have dll-interface to be used by clients of class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+          with
+          [
+              _Elem=char
+          ]
+H:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4658): message : see declaration of 'std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<_Elem>>,true>'
+          with
+          [
+              _Elem=char
+          ]
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(831,18): warning C4251: 'rpmClasses::cppDebug::logFile_': class 'std::basic_ofstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'rpmClasses::cppDebug'
+H:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iosfwd(233): message : see declaration of 'std::basic_ofstream<char,std::char_traits<char>>'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(37,21): error C2668: 'rpmClasses::cppDebug::cppDebug': ambiguous call to overloaded function
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(141,9): message : could be 'rpmClasses::cppDebug::cppDebug(std::string,rpmClasses::cppDebug::enumFileModes)'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(129,9): message : or       'rpmClasses::cppDebug::cppDebug(void)'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(832,3): message : while trying to match the argument list '()'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(832,2): message : This diagnostic occurred in the compiler generated function 'void rpmClasses::cppDebug::__dflt_ctor_closure(void)'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(832,2): message : see reference to function 'void rpmClasses::cppDebug::__dflt_ctor_closure(void)'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(57,46): error C2572: 'rpmClasses::cppDebug::cppDebug': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(141): message : see declaration of 'rpmClasses::cppDebug::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(57,76): error C2572: 'rpmClasses::cppDebug::cppDebug': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(141): message : see declaration of 'rpmClasses::cppDebug::cppDebug'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(74,5): error C2084: function 'rpmClasses::cppDebug::~cppDebug(void)' already has a body
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(145): message : see previous definition of '{dtor}'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(163,75): error C2572: 'rpmClasses::cppDebug::logFileMessage': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(189): message : see declaration of 'rpmClasses::cppDebug::logFileMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(195,77): error C2572: 'rpmClasses::cppDebug::logFileMessageEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(205): message : see declaration of 'rpmClasses::cppDebug::logFileMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(195,100): error C2572: 'rpmClasses::cppDebug::logFileMessageEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(205): message : see declaration of 'rpmClasses::cppDebug::logFileMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(195,127): error C2572: 'rpmClasses::cppDebug::logFileMessageEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(205): message : see declaration of 'rpmClasses::cppDebug::logFileMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(231,82): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(217): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(231,102): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(217): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(273,84): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNumEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(229): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(273,107): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNumEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(229): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(273,127): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNumEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(229): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(273,153): error C2572: 'rpmClasses::cppDebug::logFileMessageLineNumEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(229): message : see declaration of 'rpmClasses::cppDebug::logFileMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(323,76): error C2572: 'rpmClasses::cppDebug::logFileFunction': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(242): message : see declaration of 'rpmClasses::cppDebug::logFileFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(323,103): error C2572: 'rpmClasses::cppDebug::logFileFunction': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(242): message : see declaration of 'rpmClasses::cppDebug::logFileFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(323,130): error C2572: 'rpmClasses::cppDebug::logFileFunction': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(242): message : see declaration of 'rpmClasses::cppDebug::logFileFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(359,78): error C2572: 'rpmClasses::cppDebug::logFileFunctionEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(253): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(359,101): error C2572: 'rpmClasses::cppDebug::logFileFunctionEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(253): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(359,128): error C2572: 'rpmClasses::cppDebug::logFileFunctionEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(253): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(359,155): error C2572: 'rpmClasses::cppDebug::logFileFunctionEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(253): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(404,83): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(264): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(404,110): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(264): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(404,129): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNum': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(264): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(404,155): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNum': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(264): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(452,85): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNumEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(275): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(452,108): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNumEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(275): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(452,135): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNumEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(275): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(452,154): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNumEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(275): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(452,180): error C2572: 'rpmClasses::cppDebug::logFileFunctionLineNumEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(275): message : see declaration of 'rpmClasses::cppDebug::logFileFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(515,73): error C2572: 'rpmClasses::cppDebug::logFileClass': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(291): message : see declaration of 'rpmClasses::cppDebug::logFileClass'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(515,97): error C2572: 'rpmClasses::cppDebug::logFileClass': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(291): message : see declaration of 'rpmClasses::cppDebug::logFileClass'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(515,124): error C2572: 'rpmClasses::cppDebug::logFileClass': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(291): message : see declaration of 'rpmClasses::cppDebug::logFileClass'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(553,75): error C2572: 'rpmClasses::cppDebug::logFileClassEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(303): message : see declaration of 'rpmClasses::cppDebug::logFileClassEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(553,98): error C2572: 'rpmClasses::cppDebug::logFileClassEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(303): message : see declaration of 'rpmClasses::cppDebug::logFileClassEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(553,122): error C2572: 'rpmClasses::cppDebug::logFileClassEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(303): message : see declaration of 'rpmClasses::cppDebug::logFileClassEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(553,149): error C2572: 'rpmClasses::cppDebug::logFileClassEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(303): message : see declaration of 'rpmClasses::cppDebug::logFileClassEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(601,80): error C2572: 'rpmClasses::cppDebug::logFileClassLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(315): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(601,104): error C2572: 'rpmClasses::cppDebug::logFileClassLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(315): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(601,124): error C2572: 'rpmClasses::cppDebug::logFileClassLineNum': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(315): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(601,150): error C2572: 'rpmClasses::cppDebug::logFileClassLineNum': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(315): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(653,82): error C2572: 'rpmClasses::cppDebug::logFileClassLineNumEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(327): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(653,105): error C2572: 'rpmClasses::cppDebug::logFileClassLineNumEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(327): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(653,129): error C2572: 'rpmClasses::cppDebug::logFileClassLineNumEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(327): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(653,149): error C2572: 'rpmClasses::cppDebug::logFileClassLineNumEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(327): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(653,175): error C2572: 'rpmClasses::cppDebug::logFileClassLineNumEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(327): message : see declaration of 'rpmClasses::cppDebug::logFileClassLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(713,81): error C2572: 'rpmClasses::cppDebug::logFileClassFunction': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(340): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(713,105): error C2572: 'rpmClasses::cppDebug::logFileClassFunction': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(340): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(713,132): error C2572: 'rpmClasses::cppDebug::logFileClassFunction': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(340): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(713,159): error C2572: 'rpmClasses::cppDebug::logFileClassFunction': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(340): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(760,83): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(351): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(760,106): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(351): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(760,130): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(351): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(760,157): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(351): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(760,184): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(351): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(817,88): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(362): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(817,112): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(362): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(817,139): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNum': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(362): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(817,158): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNum': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(362): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(817,184): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNum': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(362): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,90): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,113): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,137): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,164): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,183): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(875,209): error C2572: 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx': redefinition of default argument: parameter 6
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(373): message : see declaration of 'rpmClasses::cppDebug::logFileClassFunctionLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,81): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,104): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,128): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,155): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,174): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,210): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 6
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(947,259): error C2572: 'rpmClasses::cppDebug::logFileCustomMessage': redefinition of default argument: parameter 7
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(388): message : see declaration of 'rpmClasses::cppDebug::logFileCustomMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1062,81): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessage': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(408): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1062,101): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessage': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(408): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessage'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1094,83): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(424): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1094,106): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(424): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1094,133): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(424): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1094,155): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(424): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1130,88): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(436): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1130,108): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(436): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1130,127): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNum': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(436): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1172,90): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(448): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1172,113): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(448): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1172,133): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(448): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1172,159): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(448): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1172,181): error C2572: 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(448): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxMessageLineNumEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1222,82): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunction': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(461): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1222,109): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunction': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(461): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1222,136): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunction': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(461): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1222,158): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunction': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(461): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunction'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1258,84): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionEx': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(472): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1258,107): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionEx': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(472): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1258,134): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionEx': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(472): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1258,161): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionEx': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(472): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1258,183): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionEx': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(472): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionEx'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1303,89): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum': redefinition of default argument: parameter 1
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(483): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1303,116): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum': redefinition of default argument: parameter 2
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(483): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1303,135): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum': redefinition of default argument: parameter 3
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(483): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1303,161): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum': redefinition of default argument: parameter 4
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(483): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1303,183): error C2572: 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum': redefinition of default argument: parameter 5
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.h(483): message : see declaration of 'rpmClasses::cppDebug::logMessageBoxFunctionLineNum'
+D:\source\cppRepo\cppExtensions\cppDebug\cppDebug.cpp(1304,5): fatal error C1003: error count exceeds 100; stopping compilation
+  dllmain.cpp
+  Generating Code...
